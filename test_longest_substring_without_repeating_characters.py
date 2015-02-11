@@ -11,11 +11,12 @@ class Solution:
                 max_size = max(max_size, idx - start)
             indices[c] = idx
         return max_size
-        
-import unittest
-class CurrentTestCase(unittest.TestCase):
-    def failedTest(self):
-        self.assertTrue(False)
-    
+
+import nose
+
+def test_solution():
+    sol = Solution()
+    assert sol.lengthOfLongestSubstring("abcdef") == 6
+
 if __name__ == '__main__':
-    unittest.main()
+    nose.runmodule()
