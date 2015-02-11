@@ -1,3 +1,3 @@
 # Python solution for leetcode
 
-![travis status](https://travis-ci.org/huangcd/leetcode_python.svg)
+![https://travis-ci.org/huangcd/leetcode_python](https://travis-ci.org/huangcd/leetcode_python.svg)
