@@ -7,45 +7,50 @@ Input is guaranteed to be within the range from 1 to 3999.
 class Solution:
     # @return a string
     def intToRoman(self, num):
-        res = ''
+        return ''.join(self.yield_roman(num))
+
+    def yield_roman(self, num):
         while num:
             if num >= 1000:
-                num -= 1000
-                res += 'M'
+                yield 'M' * (num / 1000)
+                num = num % 1000
             elif num >= 900:
                 num -= 900
-                res += 'CM'
+                yield 'CM'
             elif num >= 500:
                 num -= 500
-                res += 'D'
+                yield 'D'
             elif num >= 400:
                 num -= 400
-                res += 'CD'
-            elif num > 100:
-                num -= 100
-                res += 'C'
-            elif num > 90:
+                yield 'CD'
+            elif num >= 100:
+                yield 'C' * (num / 100)
+                num = num % 100
+            elif num >= 90:
                 num -= 90
-                res += 'XC'
+                yield 'XC'
             elif num >= 50:
                 num -= 50
-                res += 'L'
+                yield 'L'
             elif num >= 40:
                 num -= 40
-                res += 'XL'
+                yield 'XL'
             elif num >= 10:
-                num -= 10
-                res += 'X'
+                yield 'X' * (num / 10)
+                num = num % 10
             elif num >= 9:
                 num -= 9
-                res += 'IX'
+                yield 'IX'
             elif num >= 5:
                 num -= 5
-                res += 'V'
+                yield 'V'
+            elif num >= 4:
+                num -= 5
+                yield 'IV'
             else:
-                num -= 1
-                res += 'I'
-        return res
+                yield 'I' * num
+                num = 0
+        raise StopIteration()
 
 import nose
 
@@ -57,6 +62,7 @@ def test_int_to_roman():
     assert sol.intToRoman(1954) == 'MCMLIV', sol.intToRoman(1954)
     assert sol.intToRoman(1990) == 'MCMXC', sol.intToRoman(1990)
     assert sol.intToRoman(2014) == 'MMXIV', sol.intToRoman(2014)
+    assert sol.intToRoman(100) == 'C', sol.intToRoman(100)
 
 if __name__ == '__main__':
     nose.runmodule()
