@@ -11,3 +11,11 @@ class Solution:
                 max_size = max(max_size, idx - start)
             indices[c] = idx
         return max_size
+        
+import unittest
+class CurrentTestCase(unittest.TestCase):
+    def failedTest(self):
+        self.assertTrue(False)
+    
+if __name__ == '__main__':
+    unittest.main()
