@@ -5,8 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>206ed74d-f28a-4075-8849-bbae1c59a2bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>testCountAndSay.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,13 +22,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="test3Sum.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="testAddTwoNumber.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testCountAndSay.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testLargestNumber.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testLetterCombinations.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testLongestSubstringWithoutRepeatingCharacters.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="testPow.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="testRemoveNthFromEnd.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="testTwoSum.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testWildcardMatching.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="testZigZagConversion.py">
